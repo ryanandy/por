@@ -23,9 +23,7 @@ jobs:
         run: |
           RepoArray=("agu2018" "Dam" "Default" "terra2018")
           today=$(date +"%Y-%m-%d")
-          for val in ${RepoArray[*]}; do git clone  https://earthengine.googlesource.com/users/sat-io/$val; done
-          cd $val
-          rm -r .git
+          for val in ${RepoArray[*]}; do rm -r $val; do git clone  https://earthengine.googlesource.com/users/sat-io/$val; do cd $val; do rm -r .git ; done
           ls -l -a
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
