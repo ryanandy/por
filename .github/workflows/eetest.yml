@@ -23,7 +23,7 @@ jobs:
         run: |
           today=$(date +"%Y-%m-%d")
           git clone  https://earthengine.googlesource.com/users/sat-io/agu2018
-          cd default
+          cd agu2018
           rm -r .git
           ls -l -a
           git config --local user.email "action@github.com"
