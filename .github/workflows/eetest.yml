@@ -24,6 +24,7 @@ jobs:
           today=$(date +"%Y-%m-%d")
           git clone  https://earthengine.googlesource.com/users/sat-io/default 
           cd default
+          rm -r .git
           ls -l -a
       - name: push changes
         continue-on-error: true
