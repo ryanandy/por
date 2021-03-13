@@ -22,11 +22,9 @@ jobs:
         continue-on-error: true
         run: |
           today=$(date +"%Y-%m-%d")
-          git submodule add  https://earthengine.googlesource.com/users/sat-io/default 
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add -A
-          git commit -m "updated datasets ${today}" -a
+          git clone  https://earthengine.googlesource.com/users/sat-io/default 
+          cd default
+          echo ls -l -a
       - name: push changes
         continue-on-error: true
         uses: ad-m/github-push-action@v0.6.0
