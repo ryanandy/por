@@ -21,7 +21,7 @@ jobs:
       - name: commit files
         continue-on-error: true
         run: |
-          RepoArray = ("agu2018" "Dam" "Default" "terra2018")
+          RepoArray=("agu2018" "Dam" "Default" "terra2018")
           today=$(date +"%Y-%m-%d")
           for val in ${RepoArray[*]}; do git clone  https://earthengine.googlesource.com/users/sat-io/$val; done
           cd $val
