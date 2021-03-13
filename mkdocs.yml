@@ -12,8 +12,7 @@ copyright: 'Copyright &copy; 2021 - 2022 Samapriya Roy'
 
 # Configuration
 theme:
-  name: null
-  custom_dir: 'material'
+  name: 'material'
 
   # 404 page
   static_templates:
