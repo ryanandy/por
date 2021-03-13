@@ -22,7 +22,7 @@ jobs:
         continue-on-error: true
         run: |
           today=$(date +"%Y-%m-%d")
-          git clone https://earthengine.googlesource.com/users/sat-io/Dam 
+          git submodule add  https://earthengine.googlesource.com/users/sat-io/default 
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
