@@ -18,13 +18,9 @@ jobs:
           ${{secrets.EECRED}}
           __END__
           eval 'set -o history' 2>/dev/null || unsetopt HIST_IGNORE_SPACE 2>/dev/null
-      - name: Remove File
-        uses: JesseTG/rm@v1.0.2
-        with:
-          path: https://github.com/ryanandy/por/tree/master/agu2018
       - name: commit files
         run: |
-          RepoArray=("Dam" "default" "terra2018")
+          RepoArray=("default")
           today=$(date +"%Y-%m-%d")
           if [ -d "$val" ]; then rm -Rf $val; fi
           for val in ${RepoArray[*]}; do git clone https://earthengine.googlesource.com/users/sat-io/$val; done
