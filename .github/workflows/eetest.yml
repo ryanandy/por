@@ -28,7 +28,7 @@ jobs:
           for val in ${RepoArray[*]}; do cd $val; done
           for val in ${RepoArray[*]}; do rm -r .git ; done
           ls -l -a
-          mv *. ~/docode
+          mv -v default/* ~/docode
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
