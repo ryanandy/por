@@ -1,0 +1,3 @@
+[submodule "default"]
+	path = default
+	url = https://earthengine.googlesource.com/users/sat-io/default
