@@ -18,20 +18,19 @@ jobs:
           ${{secrets.EECRED}}
           __END__
           eval 'set -o history' 2>/dev/null || unsetopt HIST_IGNORE_SPACE 2>/dev/null
+      - name: Remove File
+        uses: JesseTG/rm@v1.0.2
+        with:
+          path: https://github.com/ryanandy/por/tree/master/agu2018
       - name: commit files
-        continue-on-error: true
         run: |
-          RepoArray=("agu2018" "Dam" "default" "terra2018")
+          RepoArray=("Dam" "default" "terra2018")
           today=$(date +"%Y-%m-%d")
           if [ -d "$val" ]; then rm -Rf $val; fi
           for val in ${RepoArray[*]}; do git clone https://earthengine.googlesource.com/users/sat-io/$val; done
           for val in ${RepoArray[*]}; do cd $val; done
           for val in ${RepoArray[*]}; do rm -r .git ; done
           ls -l -a
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add -A
-          git commit -m "updated datasets ${today}" -a
       - name: push changes
         continue-on-error: true
         uses: ad-m/github-push-action@v0.6.0
