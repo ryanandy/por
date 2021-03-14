@@ -69,7 +69,7 @@
 
 ### v0.6.0
 - Fixed base64 encoding for GCS credentials for python 3.
-- Re-release of python 3 only supported version. Use upto version 0.5.7 only for Python 2.
+- Re-release of python 3 only supported version. Use up to version 0.5.7 only for Python 2.
 
 ### v0.5.9
 - No more deperecation or future warnings from pyproj [Issue 40](https://github.com/samapriya/porder/issues/40)
@@ -243,13 +243,13 @@
 - General improvements to the tool
 
 ### v0.1.6
-- Made fixes to have python 3.X compatability
+- Made fixes to have python 3.X compatibility
 
 ### v0.1.5
 - General improvements and bug fixes
 
 ### v0.1.4
-- Fixed issue with Python 3 CSV write compatability
+- Fixed issue with Python 3 CSV write compatibility
 - Fixed issues with Shapely instance issue
 
 ### v0.1.3
@@ -279,7 +279,7 @@
 - Merged contribution by David Shean
 - Fixed issues with op equals None
 - Fixed issues with relative import
-- Improved Py3 compatability
+- Improved Py3 compatibility
 - General improvements
 
 ### v0.0.5
